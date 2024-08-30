@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-processBar()
-{
+processBar(){
     local current=$1
     local total=$2
     local name=$3
@@ -20,7 +19,7 @@ while getopts ":s:h" opts; do
         h)  echo "[INF] Usage: $0 [-s <secret>]"
             echo "[INF]     Default: use secret from secret.txt."
             echo "[INF]     You can also provide a custom secret instead to generate the certificates."
-            exit 1
+            exit 0
             ;;
         \?) echo "[ERR] Invalid option: $OPTARG, Use -h for help"
             exit 1
